@@ -1,5 +1,7 @@
-import { Heart, Facebook, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Heart, Facebook, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
+import CookieSettingsTrigger from '@/components/CookieSettingsTrigger'
 
 const Footer = () => {
   return (
@@ -30,6 +32,7 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=61567892185318" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Facebook oficial de Centro Cristiano Casa de Provisión"
                 className="bg-church-blue hover:bg-church-gold p-3 rounded-full transition-colors duration-200"
               >
                 <Facebook className="h-5 w-5" />
@@ -38,6 +41,7 @@ const Footer = () => {
                 href="https://www.instagram.com/cc.casadeprovision/" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Instagram oficial de Centro Cristiano Casa de Provisión"
                 className="bg-church-blue hover:bg-church-gold p-3 rounded-full transition-colors duration-200"
               >
                 <Instagram className="h-5 w-5" />
@@ -46,6 +50,7 @@ const Footer = () => {
                 href="https://www.youtube.com/@cc.casadeprovision" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Canal de YouTube de Centro Cristiano Casa de Provisión"
                 className="bg-church-blue hover:bg-church-gold p-3 rounded-full transition-colors duration-200"
               >
                 <Youtube className="h-5 w-5" />
@@ -102,6 +107,22 @@ const Footer = () => {
               <Heart className="h-4 w-4 text-church-gold" />
               <span>para la gloria de Dios</span>
             </div>
+          </div>
+          <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-church-blue-light">
+            <div className="flex flex-wrap items-center gap-4">
+              <Link href="/politica-de-privacidad" className="hover:text-white transition-colors">
+                Política de Privacidad
+              </Link>
+              <span className="hidden sm:inline text-church-blue">•</span>
+              <Link href="/politica-de-cookies" className="hover:text-white transition-colors">
+                Política de Cookies
+              </Link>
+              <span className="hidden sm:inline text-church-blue">•</span>
+              <CookieSettingsTrigger />
+            </div>
+            <p className="text-xs text-church-blue-light/80">
+              Última revisión legal: noviembre 2025
+            </p>
           </div>
         </div>
       </div>

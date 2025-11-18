@@ -1,7 +1,14 @@
+import CookieConsentBanner from '@/components/CookieConsentBanner'
+
 export default function PublicLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return <>{children}</>
+  return (
+    <>
+      {children}
+      <CookieConsentBanner />
+    </>
+  )
 }
